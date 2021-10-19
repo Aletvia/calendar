@@ -46,7 +46,7 @@ POST: http://127.0.0.1:8000/api/v1/properties/
 - List existing products
 GET: http://127.0.0.1:8000/api/v1/activities/<start_date>/<end_date>/
 GET: http://127.0.0.1:8000/api/v1/activities/<average_date>/
-GET: http://127.0.0.1:8000/api/v1/activities/<status>/
+GET: http://127.0.0.1:8000/api/v1/activities/<status_activity>/
 
 - Create a new activity
 POST: http://127.0.0.1:8000/api/v1/activities/
