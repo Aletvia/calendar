@@ -47,7 +47,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -117,9 +117,9 @@ TIME_ZONE = 'America/Mexico_City'
 
 USE_I18N = True
 
-USE_L10N = True
+USE_L10N = False
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -128,5 +128,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Date Formats
-DATE_FORMAT = '%d/%m/%Y'
-DATE_INPUT_FORMATS = '%d/%m/%Y'
+DATE_FORMAT = '%d-%m-%Y'
+DATETIME_FORMAT = '%d-%m-%Y %H:%M:%S'
+
+REST_FRAMEWORK = {
+    'DATETIME_FORMAT': '%Y-%m-%d %H:%M:%S',
+}
